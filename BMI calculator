@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+class PARAM
+{
+	int weight,height;
+	float bmi;
+	public:
+		PARAM()
+		{
+			weight=0;
+			height=0;
+		}
+		PARAM(int wt, int ht)
+		{
+			weight = wt;
+			height = ht;
+		}
+		void calculate_bmi()
+		{
+			this->bmi = this->weight / ((this->height / 100)^2);
+		}
+		int operator > (PARAM const &obj)
+		{
+			if(bmi > obj.bmi)
+			    return 1;
+		    else
+		        return 0;
+		}
+};
+int main()
+{
+	int wt,ht;
+	cout<<"Enter weight and height for person 1: "<<endl;
+	cin>>wt>>ht;
+	PARAM obj1(wt,ht);
+	cout<<"Enter weight and height for person 2: "<<endl;
+	cin>>wt>>ht;
+	PARAM obj2(wt,ht);
+	obj1.calculate_bmi();
+	obj2.calculate_bmi();
+	if(obj1 > obj2)
+	    cout<<"BMI of person 1 is greater"<<endl;
+	else
+	    cout<<"BMI of person 2 is greater"<<endl;
+	return 0;
+}
