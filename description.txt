@@ -1,0 +1,41 @@
+// INTRODUCTION
+
+1) We're B22BH01 - Sri Ritwik(S20190010032), Bhima Shankar(S20190010044), Mahesh(S30190010033)
+2) Our broad topic is blockchain.
+3) Our problem title is "A decentralised market place application using Ethereum Blockchain."
+4) Problem statement is to create an ecommerce application in which the seller's listinng price is very less, prices are reasonable for buyers, guarantees trust for users, provacy of data and security.
+
+// ABOUT BASIC ECOMMERCE SMART CONTRACT CREATED USING SOLIDITY
+
+1) So, we learnt solidity and tried to create a basic ecommerce smart contract.
+2) The smart contract design can be found in slides.
+3) We basically segregated the users into both buyers and sellers. Sellers can register their products. And buyers can buy the products which are already registered.
+4) To start with, we used solidity 8.7 compiler and we ran and deployed this smart contract in Remix IDE where we will be assigned some test ether and some test accounts.
+5) Product is a struct which consists of title, description, price etc and fields like that. They are initially set by the seller.
+6) The smart contract is designed in such a way that whenever a buyer buys any product and pays certain amount, the ether will then be transferred to the smart contract and it's still not sent to the seller. Only when the buyer confirms that the product is delivered to him, it'll be transferred to the seller.
+7) As we know that we cannot modify a smart contract, we provided a destroy function so that the manager can destroy the smart contract at any point of time if any vulnerability or malicious activity is found.
+8) Once the smart contract is up and ready, the manager of the contract compiles it and deploys it into the ethereum network(a test net here) and he'll be charged some transaction fee(gas associated with deploying a contract). It is observed that the fees in our case is 0.00127897692 gwei(it's less because the smart contract is very basic).
+9) And any seller can register their products, And there is also some transaction fee for seller to register his products. In our case it is 0.00017053025 gwei.
+10) We checked our contract in Remix IDE and we noticed that everything is working as expected.
+
+// BASIC DAPP WE TRIED TO MIMIC FROM THE COURSE WE TOOK
+
+1) This is a basic end-to-end application for Payment in an Eccomerce Web Application.
+2) We have written 2 Smart contracts for the payment system and used Dai stable coin as the currency.
+3) To test the contract we have created 10 fake accounts using truffle testnet.
+4) Then we used metamask(web extension to connect to the wallet) to perform the transaction from the fake accounts in a test net environment.
+5) For the backend we used KOA framework and coming to the frontend we used react bootstrap.
+6) We have combined 3 different apps one for frontend(React), Backend(Nodejs) and for smart contracts.
+
+// THIS SEMESTER WORK
+
+1) So, in this semester we finally came to know the basic architecture of a dapp and tried to mimic a basic dapp by watching a youtube video.
+2) All 3 of us learnt the solidity programming language and created a basic smart contract on our own.
+3) When testing the contract everything went as expected.
+4) The transaction fees are less and it hints the fact that we are achieving one of our goals i.e to reduce listing prices for the seller. This indicates that we're going good.
+
+// FUTURE PLAN FOR NEXT SEMESTER
+
+1) Learn web3.js and truffle for creating a full fledged dapp.
+2) Complete writing the entire smart contract which include all the functionalities like users registering as sellers, refunds, adding to cart, adding address, including third party delivery partners and so on.
+3) Include this smart contract in the application.
